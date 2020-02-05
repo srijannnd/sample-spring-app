@@ -13,11 +13,11 @@ permissions:
     type:
       - file
 hooks:
-  BeforeInstall
+  BeforeInstall:
   - location: codedeploy/before_install.sh
-    timeout: 300
+    timeout: 100
     runas: root
   ApplicationStart:
   - location: codedeploy/start_server.sh
-    timeout: 60
+    timeout: 100
     runas: root
