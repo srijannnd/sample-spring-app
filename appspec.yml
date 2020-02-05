@@ -3,8 +3,17 @@ os: linux
 files:
   - source: /
     destination: /tmp
+    overwrite: true
+permissions:
+  - object: /tmp/codedeploy
+    pattern: "*.sh"
+    owner: root
+    group: root
+    mode: 755
+    type:
+      - file
 hooks:
   ApplicationStart:
   - location: codedeploy/start_server.sh
-    timeout: 300
+    timeout: 60
     runas: root
