@@ -1,1 +1,1 @@
-java -jar /tmp/gs-spring-boot-docker-0.1.0.jar
+java -jar /tmp/target/gs-spring-boot-docker-0.1.0.jar
