@@ -45,7 +45,7 @@ User=username
 Type=simple
 
 [Service]
-ExecStart=java8 -jar /tmp/target/gs-spring-boot-docker-0.1.0.jar
+ExecStart=/usr/lib/jvm/java-1.8.0-openjdk/bin/java -jar /tmp/target/gs-spring-boot-docker-0.1.0.jar
 Restart=always
 StandardOutput=syslog
 StandardError=syslog
