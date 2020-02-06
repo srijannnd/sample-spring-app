@@ -19,8 +19,9 @@ chsh -s /sbin/nologin springboot
 chown springboot:springboot /tmp/target/gs-spring-boot-docker-0.1.0.jar
 chmod 500 /tmp/target/gs-spring-boot-docker-0.1.0.jar
 
-# create a symbolic link
-ln -s /tmp/target/gs-spring-boot-docker-0.1.0.jar /etc/init.d/spring-boot-ec2-demo
+# create script
+rm /etc/init.d/spring-boot-ec2-demo
+echo "java8 -jar /tmp/target/gs-spring-boot-docker-0.1.0.jar" >> /etc/init.d/spring-boot-ec2-demo
 
 # forward port 80 to 8080
 echo "<VirtualHost *:80>
